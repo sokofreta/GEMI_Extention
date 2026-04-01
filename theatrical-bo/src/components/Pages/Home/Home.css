@@ -1,0 +1,23 @@
+.con {
+    margin:0px;
+}
+
+li{
+    list-style: none;
+}
+
+.Expandor{
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: burlywood;
+}
+
+.Selector{
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: aqua;
+}
