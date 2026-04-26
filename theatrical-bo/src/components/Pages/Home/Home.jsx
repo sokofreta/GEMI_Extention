@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Home.css";
+import Navbar from "../Navbar/Navbar";
 
 const dataRegions = [
   {subRegions : [{
@@ -55,12 +56,14 @@ const handleRegions = (name) =>{
 }
 
 const Home = () => {
-  return (
+  return (<>
+    <Navbar id="navbar"/>
     <ul>
       {dataRegions.map((region) => (
         <Region region={region} key={region.name} />
       ))}
     </ul>
+    </>
   );
 };
 export default Home;
