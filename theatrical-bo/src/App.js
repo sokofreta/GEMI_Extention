@@ -2,7 +2,7 @@
 import { BusinessPortal } from "./components/businessPortal/BusinessPortal";
 import { BrowserRouter as Router, Routes , Route} from 'react-router-dom';
 import  Home from "./components/Pages/Home/Home"
-import TestingRoutes from "./components/Pages/TestingRoutes/TestingRoutes";
+import Business from "./components/Pages/Business/Business"
 
 function App() {
   return (
@@ -10,11 +10,10 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route index element={<TestingRoutes/>}/>
           
-          <Route path="/Home" element={<Home/>}/>
+          <Route index element={<Home/>}/>
           <Route path="/Scrapper" element={<BusinessPortal />}/>
-          <Route path="/Bussineses" element={<h1>Bussineses</h1>}/>
+          <Route path="/Bussineses" element={<Business/>}/>
 
         </Routes>
         
