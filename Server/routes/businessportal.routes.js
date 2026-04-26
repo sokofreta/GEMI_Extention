@@ -1,6 +1,7 @@
 import { Router } from "express";
 const router = Router();
 import { BusinessPortalService } from "../scrapedata/businessPortalService.js";
+import { BusinessModel } from "../schemas/businessPortal.schema.js";
 
 router.get("/business", async (req, res) => {
   try {
@@ -77,8 +78,8 @@ router.get("info", async (req, res) => {
 //get specific Business by id.
 router.get("/businessid" , async (req,res) =>{
   try {
-    const businesses = await BusinessModel.find({companyNumber:req.query.id})
-    res.json(businesses)
+    const result = await BusinessModel.find({companyNumber:req.query.id})
+    res.json(result)
   }
   catch (err){
     console.log(err)
