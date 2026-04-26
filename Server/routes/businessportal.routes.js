@@ -73,4 +73,16 @@ router.get("info", async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
+//get specific Business by id.
+router.get("/businessid" , async (req,res) =>{
+  try {
+    const businesses = await BusinessModel.find({companyNumber:req.query.id})
+    res.json(businesses)
+  }
+  catch (err){
+    console.log(err)
+    res.status(500).json({error : "Internal server error"})
+  }
+})
 export const businessPortalRoutes = router;
