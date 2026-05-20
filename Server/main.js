@@ -7,6 +7,7 @@ import { mainRoutes } from "./routes/main.routes.js";
 import http from "http";
 import { gracefulShutdown } from "./helpers.js";
 import { Server } from "socket.io";
+import { MysqlConnection } from "./connections/Mysql.connection.js";
 
 const app = express();
 const server = http.createServer(app);
@@ -18,8 +19,9 @@ const io = new Server(server, {
   },
 });
 
+
 // Middleware
-app.use(cors({ origin: "*" }));
+app.use(cors({origin:'*',methods:["GET","POST"]}));
 app.use(express.json({ limit: "10mb" }));
 app.use(express.text({ limit: "10mb" }));
 app.use(bodyParser.json());
