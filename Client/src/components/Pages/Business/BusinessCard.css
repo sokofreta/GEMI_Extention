@@ -1,0 +1,9 @@
+.BusinessCard{
+    background-color: aqua;
+    margin: 20px;
+
+}
+
+.BusinessCard:hover{
+    background-color: cadetblue;
+}
