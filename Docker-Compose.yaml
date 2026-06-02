@@ -1,0 +1,31 @@
+
+services:
+  database:
+    image: mongo
+    container_name : Business-Data
+    command: mongod --auth
+    environment:
+      - MONGO_INITDB_DATABASE=dev_my_db
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=root
+    ports:
+      - 27020:27017
+    volumes: 
+      - mongodbdata:/data/Businesses  
+  db: 
+    image: mysql
+    container_name: UserData
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER : Sokratis
+      MYSQL_PASSWORD: root
+    ports:
+      - 3306:3306
+    volumes:
+      - Users:/data/Users
+volumes:
+  mongodbdata:
+    driver: local
+  Users:
+    driver: local
