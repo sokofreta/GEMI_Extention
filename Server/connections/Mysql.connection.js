@@ -2,14 +2,14 @@ import mysql from 'mysql2';
 
   const MySqlCon = mysql.createConnection({
       user: "root",
-      password: "S@sanas00!",
+      password: "root",
       port:3306
   })
 
   MySqlCon.connect((err)=> {
-      if (err) {throw new Error(err)}
+      if (err) {console.log(err)}
           console.log("Mysql Connected") 
-        MySqlCon.query("Use Users")        
+        //MySqlCon.query("Use Users")        
   });
 export const MysqlConnection = MySqlCon
 

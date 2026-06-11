@@ -1,6 +1,6 @@
 import { Router } from "express";
 const router = Router();
-import { BusinessPortalService } from "../scrapedata/businessPortalService.js";
+import { BusinessPortalService } from "../scrapedata/businessportalService.js";
 import { BusinessModel } from "../schemas/businessPortal.schema.js";
 
 router.get("/business", async (req, res) => {
