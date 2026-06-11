@@ -24,7 +24,7 @@ li{
 
 .PageContainer{
     position:fixed;
-    right: 0;
+    left: 70px;
     height: 75%;
     width: 90%;
     top: 10%;

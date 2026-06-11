@@ -4,5 +4,6 @@
     height: 15%;
     left: 0;
     bottom:0;
-    background-color: blue;
+    background-color: #6D8196; 
+    z-index: 2;/*Secondary color*/
 }
