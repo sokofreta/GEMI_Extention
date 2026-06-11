@@ -1,11 +1,12 @@
 .BussinesViewport{
-    height: auto;
+    height: fit-content;
     width: 80%;
+    padding: 20px;
 }
 
 .BusinessDisplay{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.5fr;
 }
 
@@ -16,5 +17,46 @@
 }
 
 .SearchInput {
-    width: 80%
+    display:flex;
+    flex-direction: row;
+    height: 55px;
+    width: 80%;
+}
+
+.SearchText{
+    width:80%
+}
+
+.SearchIcon{
+    margin-left: 15px;
+    background-color: transparent;
+    border-radius: 40% 10% 40% 10%;
+    border: 0;
+}
+
+.SearchIcon:hover{
+    background-color: lightgray ;
+}
+
+.FiltersContainer{
+    border-style: solid;
+    border-color: black;
+    border-width: 4px;
+    border-radius: 10px;
+    width: 80%;
+    height:fit-content;
+    align-content:space-around;
+    justify-content: center;
+
+    margin-top: 2%;
+    padding: 15px;
+
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+
+.Filter{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 0px 10px;
 }

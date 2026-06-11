@@ -1,9 +1,15 @@
 .BusinessCard{
-    background-color: aqua;
+    background-color: #77B1D4;
     margin: 20px;
+    border-radius: 25%;
+    height: 150px;
+    aspect-ratio: 1.3;
+    padding: 20px;
+
+    transition: box-shadow 0.5s;
 
 }
 
 .BusinessCard:hover{
-    background-color: cadetblue;
+    box-shadow:-5px 10px #000080;
 }

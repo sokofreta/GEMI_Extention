@@ -25,7 +25,7 @@ const dataRegions = [
 ];
 
 function Region({ region }) {
-  let [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <li key={region.name}>
@@ -60,7 +60,6 @@ const handleRegions = (name) =>{
 const Home = () => {
   return (<>
     <Header/>
-    <Navbar/>
     <div className="PageContainer"> 
         <div className="ListOfRegions">
             <ul>
@@ -70,10 +69,10 @@ const Home = () => {
             </ul>
     </div>
     </div>
-
     
-
       <Footer/>
+    <Navbar/>
+
     </>
   );
 };
