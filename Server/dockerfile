@@ -1,0 +1,11 @@
+FROM node:alpine
+
+COPY package*.json ./
+
+RUN npm i
+
+COPY . .
+
+EXPOSE 1000
+
+CMD [ "npm" , "start" ]
