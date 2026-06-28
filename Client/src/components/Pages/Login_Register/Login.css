@@ -1,0 +1,83 @@
+.LoginContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fffafa;
+    background-image: url("../../../../public/Background_image_test.jpg");
+    background-repeat: no-repeat;
+}
+
+.LoginForm{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: fit-content;
+    align-items: center;
+}
+
+.LoginFormCon{
+   display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 50%;
+    align-items: center;
+    border-radius: 20px;
+
+    background-color: #fffafa;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5%;
+    position: fixed;
+
+}
+
+.LoginFormSubmitBtn{
+    margin-bottom:10px ;
+    padding: 10px;
+    height: fit-content;
+    width: 80%;
+    font-size: medium;
+    border-width: 2px;
+    border-style: solid;
+    margin-top: 30px;
+
+    border-radius: 15px;
+}
+
+.LoginFormSubmitBtn:hover{
+    background-color: #44C;
+    border-color: #000080;
+    color: #fffafa;
+}
+
+.LoginFormResponse{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.LoginItem{
+    width: 80%;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 10px;
+
+}
+
+.LoginRedirect{
+    position:absolute;
+    bottom: 0px;
+    color: #000080;
+}
+
+.LoginRedirect:hover{
+    cursor: pointer;
+    border-bottom: #000080 solid;
+    border-width: 2px;
+}

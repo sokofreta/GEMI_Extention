@@ -1,0 +1,90 @@
+.RegisterContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fffafa;
+    background-image: url("../../../../public/Background_image_test.jpg");
+    background-repeat: no-repeat;
+}
+
+.RegisterFormCon {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 50%;
+    align-items: center;
+    border-radius: 20px;
+
+    background-color: #fffafa;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5%;
+    position: fixed;
+
+}
+
+.RegisterForm {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: fit-content;
+    align-items: center;
+}
+
+.RegisterItemCon {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 110%;
+    justify-items: center;
+}
+
+.RegisterFormSubmitBtn {
+    margin-bottom: 10px;
+    padding: 10px;
+    height: fit-content;
+    width: 80%;
+    font-size: medium;
+    border-width: 2px;
+    border-style: solid;
+    margin-top: 30px;
+
+    border-radius: 15px;
+}
+
+.RegisterFormSubmitBtn:hover {
+    background-color: #44C;
+    border-color: #000080;
+    color: #fffafa;
+}
+
+.RegisterFormResponse {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.RegisterItem {
+    width: 90%;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 10px;
+
+}
+
+.RegisterRedirect {
+    position: absolute;
+    bottom: 0px;
+    color: #000080;
+}
+
+.RegisterRedirect:hover {
+    cursor: pointer;
+    border-bottom: #000080 solid;
+    border-width: 2px;
+}
