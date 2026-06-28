@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Home.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer"
-import Header from "../Header/Header"
 
 const dataRegions = [
   {subRegions : [{
@@ -59,7 +58,6 @@ const handleRegions = (name) =>{
 
 const Home = () => {
   return (<>
-    <Header/>
     <div className="PageContainer"> 
         <div className="ListOfRegions">
             <ul>
