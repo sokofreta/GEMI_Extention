@@ -1,5 +1,5 @@
 export const environment = {
-  externalUrl:process.env["EXTERNAL_URL"],
+  externalUrl: process.env["EXTERNAL_URL"],
   connections: {
     redis: {
       host: process.env["REDIS__HOST"],
@@ -29,16 +29,20 @@ export const environment = {
       protocol: process.env["RABBIT_INTERNAL_PROTOCOL"],
     },
   },
-    mongo: {
-      host: "localhost",
-      user: "admin",
-      pass: "root",
-      tls: "false",
-      port: "27020",
-      extraQueryParams: "tls=false&authMechanism=DEFAULT",
-      prefix: "dev_",
-    },
+  mongo: {
+    host: "localhost",
+    user: "admin",
+    pass: "root",
+    tls: "false",
+    port: "27020",
+    extraQueryParams: "tls=false&authMechanism=DEFAULT",
+    prefix: "dev_",
+  },
 
-
-  
+  mysql: {
+    user: "root",
+    password: "root",
+    port: "3306",
+    host: "localhost",
+  },
 };
