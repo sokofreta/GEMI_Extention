@@ -12,6 +12,8 @@ services:
       - 27020:27017
     volumes: 
       - mongodbdata:/data/Businesses  
+    networks :
+      - backend
   db: 
     image: mysql
     container_name: UserData
@@ -22,19 +24,24 @@ services:
       - 3306:3306
     volumes:
       - Users:/data/Users
-
-  gemi-app:
-    build: ./Client/.
-    container_name: Webapp-frontend
-    ports:
-      - 3000:3000
-
+    networks :
+      - backend
   gemi-backend:
     build: ./server/.
+    depends_on:
+      - database
+      - db
     container_name: webapp-backend
+    environment:
+      - name=value
     ports:
       - 1000:1000
+    networks :
+      - backend
 
+networks :
+    backend:
+      driver: bridge
 volumes:
   mongodbdata:
     driver: local
