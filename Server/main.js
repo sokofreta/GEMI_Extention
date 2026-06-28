@@ -8,6 +8,7 @@ import http from "http";
 import { gracefulShutdown } from "./helpers.js";
 import { Server } from "socket.io";
 import { MysqlConnection } from "./connections/Mysql.connection.js";
+import path from "path";
 
 const app = express();
 const server = http.createServer(app);
@@ -21,7 +22,7 @@ const io = new Server(server, {
 
 
 // Middleware
-app.use(cors({origin:'*',methods:["GET","POST"]}));
+app.use(cors({ origin: '*', methods: ["GET", "POST"] }));
 app.use(express.json({ limit: "10mb" }));
 app.use(express.text({ limit: "10mb" }));
 app.use(bodyParser.json());
@@ -29,6 +30,15 @@ app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false, limit: "10mb" }));
 
 app.use(mainRoutes);
+
+//Run production code at localhost:1000
+const __dirname = path.resolve()
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 
 io.on("connection", (socket) => {
   console.log("Client connected:", socket.id);
